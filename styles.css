@@ -1,0 +1,179 @@
+* {
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    display: block;
+  }
+  
+  html, body {
+    line-height: 1.5;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #F8F8F8;
+    min-width: 280px;
+  }
+  
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    border-right: 3px solid #696969;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #nav-container {
+    height: 90%;
+    list-style: none; /* hide ul dot */
+    padding-left: 0; /* remove indentation (space) from left */
+    margin: 0;/* Remove the space between navbar and nav-container */
+    /* hide overflow */
+    overflow-y: auto; /* add scroll bar when overflow vertically */
+    overflow-x: hidden;
+  }
+  
+  #nav-container li {
+    border-top: 1px solid #F5F5F5;
+    color: #F8F8F8;
+    width: 100%; 
+  }
+  
+  .nav-link {
+    color: #F8F8F8;
+    text-decoration: none; /* remove link underline */
+    cursor: pointer;
+    /* Make link works for whole box instead of only text */
+    display: block;
+    padding: 10px 25px;
+  }
+  
+  #header-mobile {
+    display: none;
+    visibility: hidden;
+  }
+  
+  #navbar header {
+    background-color: #000000;
+    color: 	#FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    height: 10%;
+  }
+  
+  #main-doc {
+     position: absolute;
+     margin-left: 280px;
+     margin-top: 15px;
+   }
+  
+  .main-section {
+    font-size: 0.95em;
+    margin-left: 30px;
+  }
+  
+   .main-section header {
+     font-size: 32px;
+     font-weight: bold;
+     margin: 0;
+   }
+  
+   p {
+     margin: 15px 20px 15px;
+   }
+  
+   article ul li, article ol li {
+     margin: 15px 35px 15px;
+   }
+  
+   code {
+     display: block; /* To display code in box */
+     white-space: pre-line; /* Same with html <pre>, display text the way you format */
+     text-align: left;
+     line-height:2;
+     background-color: #343434;
+     color: #fff;
+     padding: 15px 10px 15px 20px;
+     margin: 15px 10px 15px 40px;
+     border-radius: 5px;
+     border: 1px solid white;
+   }
+  
+   #reference li {
+     margin-left: 10px;
+     margin-bottom: 50px;
+   }
+  
+  /* Tablet */
+  @media only screen and (max-width: 768px) {
+    #navbar header {
+      padding-top: 5px;
+      padding-bottom: 10px;
+      text-align: center;
+      height: 25px;
+  }
+    
+    #nav-container {
+      text-align: center;
+      border: 1px solid;
+      height: 225px;
+    }
+  
+    #navbar {
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 250px;
+      border: none;
+      z-index: 1;
+      min-width: 415px;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 270px;
+    }
+  }
+  
+   /* Mobile */
+  @media only screen and (max-width: 360px) {
+    #header-normal {
+      display: none;
+      visibility: hidden;
+  }
+    
+    #header-mobile {
+      visibility: visible;
+      display: inherit;
+      height: 100%;
+      padding: 0;
+      margin: 0; 
+    }
+  
+    #nav-container {
+      display: none;
+    }
+  
+    #navbar {
+      top: 0;
+      padding: 0;
+      margin: 0;
+      max-width: 360px;
+      min-width: 280px;
+      z-index: 1;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 40px;
+    }
+  }
